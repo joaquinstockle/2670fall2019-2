@@ -12,6 +12,11 @@ public class FloatData : ScriptableObject
       {
             value += amount;
       }
+
+      public void ChangeValue(float amount)
+      {
+            value = amount;
+      }
       
       public void UpdateValueLimitZero(float amount)
       {
@@ -24,17 +29,17 @@ public class FloatData : ScriptableObject
                   UpdateValue(amount);
             }
       }
-            public void UpdateValueLimitZeroAndMaxValue(float amount) 
-            {
+      public void UpdateValueLimitZeroAndMaxValue(float amount) 
+      {
                  
-                  if (value < maxValue)
-                  {
-                        UpdateValue(amount);
-                  }
-                  else
-                  {
-                        value = maxValue;
-                  }
-                   UpdateValueLimitZero(amount);
+            if (value < maxValue)
+            {
+                  UpdateValue(amount);
             }
+            else
+            {
+                  value = maxValue;
+            }
+            UpdateValueLimitZero(amount);
+      }
 }
