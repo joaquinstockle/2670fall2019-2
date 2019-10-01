@@ -10,6 +10,7 @@ public class TriggerEventBehaviour : MonoBehaviour
     {
         TriggerEnterEvent.Invoke();
     }
+    
 
     private void OnTriggerStay(Collider other)
     {
