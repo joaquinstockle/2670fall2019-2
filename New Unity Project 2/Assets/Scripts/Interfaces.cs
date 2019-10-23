@@ -1,5 +1,7 @@
-﻿using UnityEngine;
+﻿using System.Numerics;
+using UnityEngine;
 using UnityEngine.Events;
+using Vector3 = UnityEngine.Vector3;
 
 public interface IRun
 {
@@ -21,4 +23,10 @@ public interface IListen
 public interface ITrigger
 {
     void onTriggerEnter(Collider obj);
+}
+
+public interface IMove
+{
+    Vector3 location { get; set; }
+    void Move(CharacterController controller);
 }
